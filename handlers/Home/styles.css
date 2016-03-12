@@ -1,0 +1,7 @@
+/** @define Home; use strict */
+
+.Home {}
+
+.Home-child {}
+
+.Home-child.is-state {}

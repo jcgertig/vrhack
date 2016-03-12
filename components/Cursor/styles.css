@@ -1,0 +1,8 @@
+/** @define Cursor; use strict */
+
+.Cursor {}
+
+.Cursor-child {}
+
+.Cursor-child.is-state {}
+
