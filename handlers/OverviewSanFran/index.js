@@ -139,8 +139,6 @@ class OverviewSanFran extends Component {
           position="3 -0.05 -4"
           material="src: 'url(/public/imgs/location.png)'"
           scale="0.07 0.05 1"
-          onMouseEnter={()=>this.startNavigation('/san_fancisco')}
-          onMouseLeave={()=>this.stopNavigation('/san_fancisco')}
         />
       </Entity>
     );
