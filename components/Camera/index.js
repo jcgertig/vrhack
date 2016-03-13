@@ -14,7 +14,6 @@ class Camera extends Component {
           no-click-look-controls="maxyaw:0.8;maxpitch:1"
           camera=""
           look-controls=""
-          wasd-controls=""
           {...this.props}
         />
       </Entity>

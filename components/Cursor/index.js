@@ -22,7 +22,7 @@ class Cursor extends Component {
   render(): ?ReactElement {
     let {geometry, material} = this.state;
     let {color, opacity} = this.props;
-    let materialOther = {color, opacity: opacity || 0.9};
+    let materialOther = {color: color || 'black', opacity: opacity || 0.9};
     return (
       <Entity
         cursor={this.props}
@@ -36,7 +36,7 @@ class Cursor extends Component {
   static displayName = 'Cursor';
 
   static propTypes = {
-    color: PropTypes.any.isRequired,
+    color: PropTypes.any,
     opacity: PropTypes.number,
   };
 
