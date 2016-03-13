@@ -10,8 +10,8 @@ class Cursor extends Component {
   state = {
     geometry: {
       primitive: 'ring',
-      radiusInner: 0.01,
-      radiusOuter: 0.016
+      radiusInner: 0.03,
+      radiusOuter: 0.056
     },
     material: {
       shader: 'flat',
@@ -28,7 +28,7 @@ class Cursor extends Component {
         cursor={this.props}
         geometry={geometry}
         material={Object.assign({}, material, materialOther)}
-        position="0 0 -1"
+        position="0 0 -3"
       />
     );
   }

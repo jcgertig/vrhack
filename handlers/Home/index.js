@@ -68,7 +68,8 @@ class Home extends Component {
           scale="0.1 0.1 1"
         />
 
-        <DownButton />
+      <DownButton onMouseEnter={()=>{this.startNavigation('/overview');}}
+      onMouseLeave={()=>{this.stopNavigation();}} />
       </Entity>
     );
   }

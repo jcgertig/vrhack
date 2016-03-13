@@ -23,8 +23,8 @@ class DownButton extends Component {
         position="0 -2 -4"
         material="src: 'url(/public/imgs/arrow_down.png)'; transparent: true"
         scale="0.025 0.025 1"
-        onMouseEnter={this.toggleHover}
-        onMouseLeave={this.toggleHover}
+        onMouseEnter={this.props.onMouseEnter}
+        onMouseLeave={this.props.onMouseLeave}
       >
         { this.state.hovering && (
           <Animation

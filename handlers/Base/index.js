@@ -41,12 +41,17 @@ class Base extends Component {
     // this.setState();
   };
 
+  goDown = () => {
+    this.navigateTo('/overview');
+  };
+
   componentDidMount() {
     if (annyang) {
       // Let's define a command.
       var commands = {
         'about': ()=>this.navigateTo('/about'),
-        'home': ()=>this.navigateTo('/')
+        'home': ()=>this.navigateTo('/'),
+        'down': this.goDown
       };
 
       // Add our commands to annyang
