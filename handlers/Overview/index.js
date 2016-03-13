@@ -18,13 +18,33 @@ class Overview extends Component {
   };
 
   renderCover = () => {
-    if (this.state.cover.length > 0){
+    if (this.state.cover.length > 0) {
+      let geometry = { primitive: 'box', depth: 0.01 };
+      let material = { src: 'url(/public/imgs/'+this.state.cover+')'};
+      let scale = '0.025 0.025 1';
+      let position = '0 0 -1.5';
+      switch (this.state.cover) {
+        case 'what_expanded.png':
+          geometry = Object.assign({}, geometry, {
+            width: 51.2,
+            height: 18.2,
+          });
+          break;
+
+      }
       return (
         <Entity>
           <Entity
             geometry={{primitive: 'box', depth: 4, width: 4, height: 4}}
             material={{color: '#562C76', shader: 'flat', opacity: 0.7}}
             scale="1 1 -1"
+          />
+          <Entity
+            geometry={geometry}
+            material={material}
+            scale={scale}
+            position={position}
+            onMouseLeave={this.closeCover}
           />
         </Entity>
       );
