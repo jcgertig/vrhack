@@ -10,6 +10,12 @@ class VideoSky extends Component {
   render(): ?ReactElement {
     return (
       <Entity>
+        <Entity
+          geometry={{primitive: 'sphere', radius: 5100}}
+          material={{src: 'url(/public/Home-Fallback.jpg)', shader: 'flat'}}
+          scale="1 1 -1"
+        />
+
         <a-videosphere src="/public/R0010072.webm" scale="1 1 -1"></a-videosphere>
 
         <Entity
