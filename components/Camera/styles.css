@@ -1,0 +1,8 @@
+/** @define Camera; use strict */
+
+.Camera {}
+
+.Camera-child {}
+
+.Camera-child.is-state {}
+

@@ -11,8 +11,10 @@
     "build": "node ./scripts/build && node dist/main.js"
   },
   "dependencies": {
-    "aframe": "^0.1.2",
+    "aframe": "aframevr/aframe#dev",
+    "aframe-layout": "^1.0.2",
     "aframe-react": "^1.2.0",
+    "aframe-text-component": "^0.2.0",
     "array.prototype.find": "^2.0.0",
     "babel-core": "^6.7.2",
     "babel-eslint": "^5.0.0",
@@ -37,6 +39,7 @@
     "history": "^2.0.1",
     "immutable": "^3.7.3",
     "isomorphic-fetch": "^2.1.0",
+    "json-loader": "^0.5.4",
     "marked": "^0.3.5",
     "node-noop": "^1.0.0",
     "normalize.css": "^3.0.3",

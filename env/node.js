@@ -32,18 +32,19 @@ app.get('/robots.txt', (req, res) => {
 });
 
 app.get('*', (req, res) => {
-  const location = createLocation(req.url);
-  match({ routes, location }, (error, redirectLocation, renderProps) => {
-    if (error) {
-      res.status(500).send(error.message);
-    } else if (redirectLocation) {
-      res.redirect(302, redirectLocation.pathname + redirectLocation.search);
-    } else if (renderProps) {
-      res.status(200).send(tmpl({html: renderToString(<RouterContext {...renderProps} />)}));
-    } else {
-      res.status(404).send('Not found');
-    }
-  });
+  res.status(200).send(tmpl({html: ''}));
+  // const location = createLocation(req.url);
+  // match({ routes, location }, (error, redirectLocation, renderProps) => {
+  //   if (error) {
+  //     res.status(500).send(error.message);
+  //   } else if (redirectLocation) {
+  //     res.redirect(302, redirectLocation.pathname + redirectLocation.search);
+  //   } else if (renderProps) {
+  //     res.status(200).send(tmpl({html: renderToString(<RouterContext {...renderProps} />)}));
+  //   } else {
+  //     res.status(404).send('Not found');
+  //   }
+  // });
 });
 
 debug(`app server starting on `);

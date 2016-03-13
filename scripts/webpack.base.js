@@ -90,20 +90,19 @@ module.exports = function(options) {
       // extensions: ['', '.webpack.js', '.web.js', '.js', '.css'],
 
       loaders: [
-        { test: /\.css$/,
+        {
+          test: /\.css$/,
           loader: options.env !== 'development' ?
             ExtractTextPlugin.extract('style', 'css?importLoaders=1!postcss') :
             'style!css?importLoaders=1!postcss',
         },
         {test: /\.json$/, loader: 'json'},
-        {test: /\.jsx?$/,
-          exclude: [
-            // exclude everything that isn’t a react- component
-            /node_modules(?!\/react-)/,
-          ],
+        {
+          test: /\.jsx?$/,
+          exclude: /(node_modules)/,
           loaders: concat(
             options.hotloader && 'react-hot',
-            'babel?presets[]=react,presets[]=es2015,presets[]=stage-1'
+            'babel?cacheDirectory&presets[]=react,presets[]=es2015,presets[]=stage-1'
           ),
         },
       ],

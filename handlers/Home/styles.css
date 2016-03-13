@@ -1,5 +1,9 @@
 /** @define Home; use strict */
 
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 .Home {}
 
 .Home-child {}
