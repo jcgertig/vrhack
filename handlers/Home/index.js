@@ -13,7 +13,8 @@ import {Animation, Entity, Scene} from 'aframe-react';
 
 import Camera from 'Camera';
 import Cursor from 'Cursor';
-import Sky from 'Sky';
+import VideoSky from 'VideoSky';
+import DownButton from 'DownButton';
 
 class Home extends Component {
 
@@ -47,20 +48,14 @@ class Home extends Component {
             light={{type: 'ambient', intensity: 2}}
           />
 
-        <a-videosphere src="/public/R0010072.MP4" scale="1 1 -1"></a-videosphere>
-          <Entity
-            geometry={{primitive: 'sphere', radius: 4980}}
-            material={{color: '#562C76', shader: 'flat', opacity: 0.6}}
-            scale="1 1 -1"
-          />
-
-
+          <VideoSky fadeColor="#562C76" />
 
           <Entity
             geometry="primitive: box; depth: 0.01"
             position="-9 5 -9"
             material="src: 'url(/public/imgs/VRHack.png)'; transparent: true"
             scale="0.5 0.5 1"
+            onClick={()=>{console.log('clicked');}}
           />
 
           <Entity
@@ -104,6 +99,8 @@ class Home extends Component {
             material="src: 'url(/public/imgs/REGISTER.png)'; transparent: true"
             scale="0.035 0.035 1"
           />
+
+          <DownButton />
 
         </Scene>
       </div>
