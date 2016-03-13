@@ -74,10 +74,10 @@ class Overview extends Component {
           look-at="[camera]"
         />
         <Entity
-          geometry="primitive: box; depth: 0.01; height: 51.2; width: 33.2"
+          geometry="primitive: box; depth: 0.01; height: 49.2; width: 40.2"
           position="3 -0.05 -4"
           material="src: 'url(/public/imgs/Register_Block.png)'"
-          scale="0.07 0.06 1"
+          scale="0.07 0.05 1"
         />
       </Entity>
     );
