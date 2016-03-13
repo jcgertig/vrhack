@@ -85,6 +85,13 @@ class Home extends Component {
           />
 
           <Entity
+            geometry="primitive: box; depth: 0.01; height: 11; width: 51.2"
+            position="6.2 5 -9"
+            material="src: 'url(/public/imgs/ABOUT.png)'; transparent: true"
+            scale="0.025 0.025 1"
+          />
+
+          <Entity
             geometry="primitive: box; depth: 0.01; height: 15.1; width: 51.2"
             position="7.8 5 -9"
             material="src: 'url(/public/imgs/PAST.png)'; transparent: true"
