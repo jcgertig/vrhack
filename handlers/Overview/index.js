@@ -30,6 +30,19 @@ class Overview extends Component {
             height: 18.2,
           });
           break;
+        case 'who_is_hosting.png':
+          geometry = Object.assign({}, geometry, {
+            width: 51.2,
+            height: 18.2,
+          });
+          break;
+        case 'when_is_vr_open.png':
+          geometry = Object.assign({}, geometry, {
+            width: 51.2,
+            height: 8.3,
+          });
+          position = '0 -0.18 -1.5'
+          break;
 
       }
       return (
@@ -74,7 +87,7 @@ class Overview extends Component {
         <Entity
           geometry="primitive: box; depth: 0.01; height: 51.2; width: 51.2"
           position="-1.5 0.11 -4"
-          material="src: 'url(/public/imgs/What Is VR.png)'"
+          material="src: 'url(/public/imgs/What_Is_VR.png)'"
           scale="0.0105 0.0105 1"
           look-at="[camera]"
           onMouseEnter={()=>this.openCover('what_expanded.png')}
@@ -82,10 +95,10 @@ class Overview extends Component {
         <Entity
           geometry="primitive: box; depth: 0.01; height: 51.2; width: 51.2"
           position="-1.5 -0.45 -4"
-          material="src: 'url(/public/imgs/When Is VR.png)'"
+          material="src: 'url(/public/imgs/When_Is_VR.png)'"
           scale="0.0105 0.0105 1"
           look-at="[camera]"
-          onMouseEnter={()=>this.openCover('who_is_hosting.png')}
+          onMouseEnter={()=>this.openCover('when_is_vr_open.png')}
         />
         <Entity
           geometry="primitive: box; depth: 0.01; height: 51.2; width: 51.2"
@@ -93,7 +106,7 @@ class Overview extends Component {
           material="src: 'url(/public/imgs/Profile.png)'"
           scale="0.0105 0.0105 1"
           look-at="[camera]"
-          onMouseEnter={()=>this.openCover('profile_open.png')}
+          onMouseEnter={()=>this.openCover('who_is_hosting.png')}
         />
         <Entity
           geometry="primitive: box; depth: 0.01; height: 49.2; width: 40.2"
