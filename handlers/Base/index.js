@@ -42,7 +42,18 @@ class Base extends Component {
   };
 
   goDown = () => {
-    this.navigateTo('/overview');
+    console.log(window)
+    switch (window.location.pathname) {
+      case '/':
+          this.navigateTo('/overview');
+        break;
+      case '/san_francisco':
+          this.navigateTo('/san_francisco/overview');
+        break;
+      default:
+
+    }
+
   };
 
   componentDidMount() {
@@ -76,7 +87,7 @@ class Base extends Component {
           <VideoSky fadeColor="#562C76" />
 
           <Entity
-            geometry="primitive: box; depth: 0.01"
+            geometry="primitive: plane; depth: 0.01"
             position="-3 2.2 -3"
             material="src: 'url(/public/imgs/VRHack.png)'; transparent: true"
             scale="0.25 0.25 1"
@@ -85,7 +96,7 @@ class Base extends Component {
           />
 
           <Entity
-            geometry="primitive: box; depth: 0.01; height: 5.5; width: 25.51"
+            geometry="primitive: plane; depth: 0.01; height: 5.5; width: 25.51"
             position="1.4 2.2 -3"
             material="src: 'url(/public/imgs/ABOUT.png)'; transparent: true"
             scale="0.025 0.025 1"
@@ -94,7 +105,7 @@ class Base extends Component {
           />
 
           <Entity
-            geometry="primitive: box; depth: 0.01; height: 7.55; width: 25.51"
+            geometry="primitive: plane; depth: 0.01; height: 7.55; width: 25.51"
             position="2.15 2.2 -3"
             material="src: 'url(/public/imgs/PAST.png)'; transparent: true"
             scale="0.019 0.019 1"
@@ -102,7 +113,7 @@ class Base extends Component {
           />
 
           <Entity
-            geometry="primitive: box; depth: 0.01; height: 3.55; width: 25.51"
+            geometry="primitive: plane; depth: 0.01; height: 3.55; width: 25.51"
             position="3 2.2 -3"
             material="src: 'url(/public/imgs/REGISTER.png)'; transparent: true"
             scale="0.035 0.035 1"

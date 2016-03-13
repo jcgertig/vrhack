@@ -28,15 +28,6 @@ class Home extends Component {
     });
   };
 
-  // <a-cylinder
-  //   src="/public/imgs/Bridge.jpg"
-  //   height="30"
-  //   rotation="0 160 0"
-  //   scale="1 1 -1"
-  //   radius="20"
-  //   segments-radial="1000"
-  // ></a-cylinder>
-
   navigateTo = (to) => {
     this.context.router.push(to);
   };

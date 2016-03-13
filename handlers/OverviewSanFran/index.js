@@ -11,7 +11,7 @@ import Cursor from 'Cursor';
 import VideoSky from 'VideoSky';
 import DownButton from 'DownButton';
 
-class Overview extends Component {
+class OverviewSanFran extends Component {
 
   static contextTypes = {
     router: PropTypes.object.isRequired
@@ -84,7 +84,6 @@ class Overview extends Component {
   };
 
   openCover = (cover) => {
-    console.log('over');
     this.setState({ cover });
   };
 
@@ -95,7 +94,16 @@ class Overview extends Component {
   render(): ?ReactElement {
     return (
       <Entity>
+        <a-cylinder
+          src="/public/imgs/Bridge.jpg"
+          height="35"
+          rotation="0 240 0"
+          scale="1 1 -1"
+          radius="20"
+          segments-radial="1000"
+        ></a-cylinder>
         { this.renderCover() }
+
         <Entity
           geometry="primitive: box; depth: 0.01; height: 51.2; width: 65.4"
           position="-3 -0.05 -4"
@@ -129,16 +137,16 @@ class Overview extends Component {
         <Entity
           geometry="primitive: box; depth: 0.01; height: 49.2; width: 40.2"
           position="3 -0.05 -4"
-          material="src: 'url(/public/imgs/Register_Block.png)'"
+          material="src: 'url(/public/imgs/location.png)'"
           scale="0.07 0.05 1"
-          onMouseEnter={()=>this.startNavigation('/san_francisco')}
-          onMouseLeave={()=>this.stopNavigation('/san_francisco')}
+          onMouseEnter={()=>this.startNavigation('/san_fancisco')}
+          onMouseLeave={()=>this.stopNavigation('/san_fancisco')}
         />
       </Entity>
     );
   }
 
-  static displayName = 'Overview';
+  static displayName = 'OverviewSanFran';
 
   static propTypes = {
     // id: PropTypes.any.isRequired,
@@ -146,4 +154,4 @@ class Overview extends Component {
 
 }
 
-export default Overview;
+export default OverviewSanFran;
