@@ -15,6 +15,7 @@
     "aframe-layout": "^1.0.2",
     "aframe-react": "^1.2.0",
     "aframe-text-component": "^0.2.0",
+    "annyang": "^1.0.1",
     "array.prototype.find": "^2.0.0",
     "babel-core": "^6.7.2",
     "babel-eslint": "^5.0.0",

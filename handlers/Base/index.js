@@ -6,11 +6,13 @@ require('./styles.css');
 import React, {Component,PropTypes} from 'react';
 
 
+
 if (typeof window !== 'undefined') {
   require('aframe');
   require('aframe-text-component');
   require('../../public/Roboto_Regular');
 }
+
 import {Animation, Entity, Scene} from 'aframe-react';
 
 import Camera from 'Camera';
@@ -38,6 +40,22 @@ class Base extends Component {
     clearTimeout(this.timer);
     // this.setState();
   };
+
+  componentDidMount() {
+    if (annyang) {
+      // Let's define a command.
+      var commands = {
+        'about': ()=>this.navigateTo('/about'),
+        'home': ()=>this.navigateTo('/')
+      };
+
+      // Add our commands to annyang
+      annyang.addCommands(commands);
+
+      // Start listening.
+      annyang.start();
+    }
+  }
 
 
   render(): ?ReactElement {
