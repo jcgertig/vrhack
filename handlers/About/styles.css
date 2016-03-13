@@ -1,0 +1,7 @@
+/** @define About; use strict */
+
+.About {}
+
+.About-child {}
+
+.About-child.is-state {}

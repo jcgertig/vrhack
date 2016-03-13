@@ -4,12 +4,14 @@ import { Router, IndexRoute, Route } from 'react-router';
 
 import Base from './handlers/Base';
 import Home from'./handlers/Home';
+import About from'./handlers/About';
 import NotFound from './handlers/NotFound';
 
 var routes = (
   <Router>
     <Route path="/" component={Base}>
       <IndexRoute component={Home} />
+      <Route path="about" component={About} />
       <Route path="*" component={NotFound} />
     </Route>
   </Router>

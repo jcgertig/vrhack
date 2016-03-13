@@ -11,7 +11,6 @@ class Camera extends Component {
     return (
       <Entity>
         <Entity
-          no-click-look-controls="maxyaw:0.8;maxpitch:1"
           camera=""
           look-controls=""
           {...this.props}

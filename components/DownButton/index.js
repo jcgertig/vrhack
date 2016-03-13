@@ -30,7 +30,7 @@ class DownButton extends Component {
           <Animation
             attribute="rotation"
             dur="1000"
-            repeat="3"
+            repeat="1"
             to="0 360 0"
           />
         )}
