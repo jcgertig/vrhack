@@ -13,7 +13,6 @@ class Camera extends Component {
         <Entity
           camera=""
           look-controls=""
-          wasd-controls=""
           {...this.props}
         />
       </Entity>
