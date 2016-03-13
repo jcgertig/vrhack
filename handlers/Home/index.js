@@ -17,6 +17,7 @@ class Home extends Component {
 
   state = {
     color: 'red',
+    showVoice: true
   };
 
   timer = null;
@@ -41,6 +42,12 @@ class Home extends Component {
     // this.setState();
   };
 
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ showVoice: false })
+    }, 10000);
+  }
+
   render(): ?ReactElement {
     return (
       <Entity>
@@ -59,8 +66,21 @@ class Home extends Component {
           scale="0.1 0.1 1"
         />
 
-      <DownButton onMouseEnter={()=>{this.startNavigation('/overview');}}
-      onMouseLeave={()=>{this.stopNavigation();}} />
+        {
+          this.state.showVoice && (
+            <Entity
+              geometry="primitive: box; depth: 0.01; height: 9.5; width: 51.2"
+              position="8 -2 -10"
+              material="src: 'url(/public/imgs/voice.png)'; transparent: true"
+              scale="0.08 0.08 1"
+            />
+          )
+        }
+
+        <DownButton
+          onMouseEnter={()=>{this.startNavigation('/overview');}}
+          onMouseLeave={()=>{this.stopNavigation();}}
+        />
       </Entity>
     );
   }

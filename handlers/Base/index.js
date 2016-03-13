@@ -62,6 +62,7 @@ class Base extends Component {
       var commands = {
         'about': ()=>this.navigateTo('/about'),
         'home': ()=>this.navigateTo('/'),
+        'san francisco': ()=>this.navigateTo('/san_francisco'),
         'down': this.goDown
       };
 
