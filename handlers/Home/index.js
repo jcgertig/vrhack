@@ -69,7 +69,7 @@ class Home extends Component {
         {
           this.state.showVoice && (
             <Entity
-              geometry="primitive: box; depth: 0.01; height: 9.5; width: 51.2"
+              geometry="primitive: plane; depth: 0.01; height: 9.5; width: 51.2"
               position="8 -2 -10"
               material="src: 'url(/public/imgs/voice.png)'; transparent: true"
               scale="0.08 0.08 1"
